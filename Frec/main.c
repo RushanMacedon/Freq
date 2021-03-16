@@ -67,10 +67,16 @@
 int main(void)
 {
     freq_init(&p_t);
-    freq_timer_start(15);
+    freq_timer_start(30);
     
     while (true)
     {
+        i++;
+        if (i == 100)
+        {
+            freq_timer_change(1);
+        }
+         
         
         __WFI();
     }
